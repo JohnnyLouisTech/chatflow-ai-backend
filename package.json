@@ -4,7 +4,7 @@
   "description": "ChatFlow AI Backend API",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/models/migrate.js && node src/index.js",
     "dev": "nodemon src/index.js",
     "migrate": "node src/models/migrate.js",
     "seed": "node src/models/seed.js"
