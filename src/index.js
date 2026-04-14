@@ -1,3 +1,11 @@
+// Run migrations on startup
+const { migrate } = require('./models/db');
+migrate().then(() => {
+  console.log('✅ Migrations complete');
+}).catch(err => {
+  console.error('Migration error:', err);
+});
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
